@@ -4,6 +4,7 @@ const app = new Koa();
 // x-response-time
 
 app.use(async function (ctx, next) {
+  console.log('setting x-response-time');
   const start = new Date();
   await next();
   const ms = new Date() - start;
